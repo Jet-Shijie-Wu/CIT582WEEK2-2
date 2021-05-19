@@ -8,6 +8,7 @@ def hash_preimage(target_string):
     nonce = b'\x00'
     
     len_k = len(target_string)
+    print(target_string)
     while True:
         x = ''.join(random.sample(string.ascii_letters, 30))
         byte_x = x.encode('utf-8')
