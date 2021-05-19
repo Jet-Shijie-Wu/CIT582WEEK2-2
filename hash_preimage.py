@@ -14,7 +14,7 @@ def hash_preimage(target_string):
         hex_x = bin(int(hashlib.sha256(byte_x).hexdigest(), 16))
 
         if hex_x[-len_k:] == target_string:
-            return (byte_x)
+            return (x)
         continue
 
     return( nonce )
