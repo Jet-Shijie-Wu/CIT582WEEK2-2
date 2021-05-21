@@ -6,7 +6,7 @@ def hash_preimage(target_string):
         print( "Input should be a string of bits" )
         return
     nonce = b'\x00'
-    
+    print(target_string)
     len_k = len(target_string)
     while True:
         x = ''.join(random.sample(string.ascii_letters, 30))
