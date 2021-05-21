@@ -6,11 +6,11 @@ def hash_preimage(target_string):
         print( "Input should be a string of bits" )
         return
     nonce = b'\x00'
-    print(target_string)
+
     len_k = len(target_string)
     while True:
         x = ''.join(random.sample(string.ascii_letters, 30))
-        byte_x = x.encode('utf-8')
+        byte_x = os.urandom(30)
         hex_x = bin(int(hashlib.sha256(byte_x).hexdigest(), 16))
 
         if hex_x[-len_k:] == target_string:
