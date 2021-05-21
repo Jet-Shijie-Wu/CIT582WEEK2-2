@@ -1,5 +1,7 @@
 import hashlib
 import os
+import random
+import string
 
 def hash_preimage(target_string):
     if not all( [x in '01' for x in target_string ] ):
@@ -15,6 +17,6 @@ def hash_preimage(target_string):
 
         if hex_x[-len_k:] == target_string:
             return (byte_x)
-        #continue
+        continue
 
     return( nonce )
