@@ -15,6 +15,6 @@ def hash_preimage(target_string):
 
         if hex_x[-len_k:] == target_string:
             return (x)
-        continue
+        #continue
 
     return( nonce )
